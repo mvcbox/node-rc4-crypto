@@ -1,12 +1,35 @@
 {
   "name": "rc4-crypto",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "RC4",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/.bin/tsc"
+    "build": "npm run clean && node ./node_modules/.bin/tsc",
+    "clean": "node -e \"['./dist'].forEach(item => require('fs').rmSync(item, {recursive:true,force:true}));\"",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=18.0.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": ">=8.6.0",
+      "onFail": "error"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,9 +44,14 @@
     "url": "https://github.com/mvcbox/node-rc4-crypto/issues"
   },
   "homepage": "https://github.com/mvcbox/node-rc4-crypto#readme",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.7.5",
-    "typescript": "^3.6.3"
+    "@types/node": "^6.14.13",
+    "typescript": "^4.7.2"
   }
 }

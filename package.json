@@ -1,6 +1,6 @@
 {
   "name": "rc4-crypto",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "RC4",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

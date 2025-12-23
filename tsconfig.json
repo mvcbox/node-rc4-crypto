@@ -6,13 +6,13 @@
     "outDir": "dist",
     "module": "commonjs",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
     "removeComments": true,
     "declaration": true,
     "sourceMap": false,
     "inlineSources": false,
     "allowJs": false,
-    "esModuleInterop": true,
     "strictPropertyInitialization": true,
     "typeRoots": ["node_modules/@types"]
   }

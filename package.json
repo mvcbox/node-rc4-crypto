@@ -2,6 +2,7 @@
   "name": "rc4-crypto",
   "version": "2.0.0",
   "description": "RC4",
+  "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -49,7 +50,6 @@
     "LICENSE",
     "README.md"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^6.14.13",
     "typescript": "^4.7.2"
